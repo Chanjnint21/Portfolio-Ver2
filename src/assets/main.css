@@ -1,0 +1,55 @@
+/* App.vue css */
+#app {
+	font-family: Avenir, Helvetica, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-align: center;
+	color: #2c3e50;
+}
+
+.logo {
+	display: flex;
+	justify-content: start;
+}
+
+.routerLink {
+	display: flex;
+	justify-content: end;
+}
+
+.routerLink a {
+	font-weight: bold;
+	color: #ffffff;
+	margin-right: 1rem;
+	text-decoration: none;
+}
+
+a.router-link-exact-active {
+	color: #2e6a4f;
+}
+
+/* HomeView css */
+.Home {
+	background-image: url('../assets/hill.jpg');
+	height: calc(100vh - 56px);
+	overflow-y: hidden;
+	background-size: cover;
+	/* background-position: center; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+}
+
+.welcome {
+	color: white;
+	font-size: 20px;
+	animation: move 3s infinite;
+}
+
+
+@keyframes move {
+	20% {
+		text-shadow: 5px 20px 30px rgb(0, 0, 0);
+	}
+}
