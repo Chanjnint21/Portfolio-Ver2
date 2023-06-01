@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <v-app-bar class="navbar" dark>
-        <v-col class="logo" cols="6">
-          <a href="/"><h1>Logo</h1></a>
+        <v-col class="Logo" cols="6">
+          <a href="/"><image-solo max_-h="40" img-src="MyLogo.png"/></a>
         </v-col>
         <v-col class="routerLink" cols="6">
           <router-link to="/">Home </router-link>

@@ -1,13 +1,35 @@
 /* App.vue css */
+body {
+	background-image: url(./Img/hill.jpg);
+	background-size: cover;
+	height: 100vh;
+	position: relative;
+	overflow-y: scroll;
+
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+	display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+	-ms-overflow-style: none;
+	/* IE and Edge */
+	scrollbar-width: none;
+	/* Firefox */
+}
+
 #app {
-	font-family: Avenir, Helvetica, Arial, sans-serif;
+	font-family: 'Dosis', sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	text-align: center;
-	color: #2c3e50;
+	/* margin-top: 1rem; */
 }
 
-.logo {
+.Logo {
 	display: flex;
 	justify-content: start;
 }
@@ -18,9 +40,10 @@
 }
 
 .routerLink a {
+	font-size: 1.5rem;
 	font-weight: bold;
 	color: #ffffff;
-	margin-right: 1rem;
+	margin-right: 1.5rem;
 	text-decoration: none;
 }
 
@@ -28,28 +51,13 @@ a.router-link-exact-active {
 	color: #2e6a4f;
 }
 
-/* HomeView css */
-.Home {
-	background-image: url('../assets/hill.jpg');
-	height: calc(100vh - 56px);
-	overflow-y: hidden;
-	background-size: cover;
-	/* background-position: center; */
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	color: white;
+.v-main {
+	height: 90vh;
+	color: rgb(222, 222, 222);
 }
 
-.welcome {
-	color: white;
-	font-size: 20px;
-	animation: move 3s infinite;
-}
-
-
-@keyframes move {
-	20% {
-		text-shadow: 5px 20px 30px rgb(0, 0, 0);
-	}
+/* portfolio */
+.portfolio {
+	margin-left: 2rem;
+	margin-right: 1rem;
 }
