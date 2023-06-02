@@ -31,7 +31,7 @@
     </div>
     <div class="contact">
       <main-title titles="Contact" />
-      <info-box class-props="logo" cols="12" max-height="300" max_-w="auto" img-source="MyLogo.png" :details="contactinfo" />
+      <info-box class-props="logo" cols="12" max-width="300" img-source="MyLogo.png" :details="contactinfo" />
       <!-- <v-row>
         <v-col class="logo" cols="12"><image-solo max_-h="400" max_-w="auto" img-src="MyLogo.png" /></v-col>
         <v-col>

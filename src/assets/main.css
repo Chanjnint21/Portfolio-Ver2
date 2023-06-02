@@ -40,7 +40,7 @@ body {
 }
 
 .routerLink a {
-	font-size: 1.5rem;
+	font-size: 1.3rem;
 	font-weight: bold;
 	color: #ffffff;
 	margin-right: 1.5rem;
@@ -57,7 +57,8 @@ a.router-link-exact-active {
 }
 
 /* portfolio */
-.portfolio {
+.portfolio,
+.Resume {
 	margin-left: 2rem;
 	margin-right: 1rem;
 }
