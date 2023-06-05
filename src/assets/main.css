@@ -22,7 +22,8 @@ body {
 }
 
 #app {
-	font-family: 'Dosis', sans-serif;
+	/* font-family: 'Dosis', sans-serif; */
+	font-family: 'Preahvihear', sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	text-align: center;
