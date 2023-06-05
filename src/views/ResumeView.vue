@@ -1,13 +1,15 @@
 <template>
     <v-main class="Resume">
-        <h1>Resume</h1>
+        <main-title :titles="resumeTitle" />
         <!-- <info-box ClassProps="resumePhoto" cols="12" img-source="resume.png" :details="resumedetails"/> -->
         <v-row id="resumeinfo">
             <v-col cols="12" class="resumePhoto">
-                <div class="ResumeImg"><image-solo max_-h="" max_-w="auto" img-src="resume.png" /></div>
+                <div class="ResumeImg"><image-solo img-src="resume.png" /></div>
             </v-col>
             <v-col class="resumefooter" cols="12">
-                <div cols="9">Main file: <a href="#ghh">hey.com</a></div>
+                <div cols="9">Main file: <a
+                        href="https://www.canva.com/design/DAFIosW-Xfw/f0l7YUVN4BqNNmJHmd09HQ/view?utm_content=DAFIosW-Xfw&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">link
+                        to main source</a></div>
                 <div cols="3"><v-btn color="pink" x-small>Download</v-btn></div>
             </v-col>
         </v-row>
@@ -17,12 +19,26 @@
 <script>
 export default {
     name: "ResumeView",
+    props: {
+        version: Boolean,
+    },
     data() {
         return {
-            resumedetails: "<v-btn>Download</v-btn>"
+            resumedetails: "<v-btn>Download</v-btn>",
+            resumeTitle: 'Resume'
         };
     },
-}
+    watch: {
+        version() {
+            if (this.version) {
+                this.resumeTitle = "ប្រវត្តិរូបសង្ខេប";
+                return;
+            }
+            this.resumeTitle = "Resume";
+            return;
+        },
+    },
+};
 </script>
 
 <style>
@@ -47,7 +63,7 @@ export default {
     justify-content: center;
 }
 
-.resumefooter{
+.resumefooter {
     border-radius: 1rem 1rem 0 0;
     background-color: rgba(0, 0, 0, 0.5);
     display: flex;
