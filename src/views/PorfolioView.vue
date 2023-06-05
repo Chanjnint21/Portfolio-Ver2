@@ -3,13 +3,16 @@
     <div>
       <v-row class="Greeting">
         <v-col cols="12" md="6" sm="6" xs="12">
-          <div id="greet">Hey, there -<main-title titles="I am &lt; Lim &gt; Chanjnint !" /></div>
+          <div id="greet">
+            {{ greetMsg }} -<main-title :titles="IntroName" />
+          </div>
           <div id="Intro">
             <p class="text-right" v-html="Intro"></p>
           </div>
         </v-col>
         <v-col id="MyPic" cols="12" md="6" sm="6" xs="12">
-          <image-solo max_-h="" max_-w="auto" img-src="hill.jpg" /></v-col>
+          <image-solo img-src="hill.jpg"
+        /></v-col>
       </v-row>
     </div>
     <div id="about">
@@ -21,37 +24,93 @@
 
     <div id="experience&tranning">
       <main-title titles="Experience & Trainning" />
-      <info-box cols="12" md="4" sm="4" xs="12" img-source="stem-festival.jpg" :details="stemfestival2018" />
-      <info-box-rev cols="12" md="5" sm="5" xs="12" img-source="codingcat.jpeg" :details="codingcat" />
-      <info-box cols="12" md="5" sm="5" xs="12" img-source="EWB.jpg" :details="ewb" />
-      <info-box-rev cols="12" md="5" sm="5" xs="12" img-source="hill.jpg" :details="stemfestival2019" />
-      <info-box cols="12" md="5" sm="5" xs="12" img-source="yearbook.png" :details="yearbook" />
-      <info-box-rev cols="12" md="5" sm="5" xs="12" img-source="internship.jpg" :details="e2Intern" />
-      <info-box cols="12" md="5" sm="5" xs="12" img-source="internship.jpg" :details="soraIntern" />
+      <info-box
+        cols="12"
+        md="4"
+        sm="4"
+        xs="12"
+        img-source="stem-festival.jpg"
+        :details="stemfestival2018"
+      />
+      <info-box-rev
+        cols="12"
+        md="5"
+        sm="5"
+        xs="12"
+        img-source="codingcat.jpeg"
+        :details="codingcat"
+      />
+      <info-box
+        cols="12"
+        md="5"
+        sm="5"
+        xs="12"
+        img-source="EWB.jpg"
+        :details="ewb"
+      />
+      <info-box-rev
+        cols="12"
+        md="5"
+        sm="5"
+        xs="12"
+        img-source="hill.jpg"
+        :details="stemfestival2019"
+      />
+      <info-box
+        cols="12"
+        md="5"
+        sm="5"
+        xs="12"
+        img-source="yearbook.png"
+        :details="yearbook"
+      />
+      <info-box-rev
+        cols="12"
+        md="5"
+        sm="5"
+        xs="12"
+        img-source="internship.jpg"
+        :details="e2Intern"
+      />
+      <info-box
+        cols="12"
+        md="5"
+        sm="5"
+        xs="12"
+        img-source="internship.jpg"
+        :details="soraIntern"
+      />
     </div>
     <div class="contact">
       <main-title titles="Contact" />
-      <info-box class-props="logo" cols="12" max-width="300" img-source="MyLogo.png" :details="contactinfo" />
-      <!-- <v-row>
-        <v-col class="logo" cols="12"><image-solo max_-h="400" max_-w="auto" img-src="MyLogo.png" /></v-col>
-        <v-col>
-          <p v-html="contacting"></p>
-        </v-col>
-      </v-row> -->
-      <!-- <info-box cols="12" max-width="auto" max-height="400" img-source="MyLogo.png"/> -->
+      <info-box
+        class-props="logo"
+        cols="12"
+        :max-width="300"
+        img-source="MyLogo.png"
+        :details="contactinfo"
+      />
     </div>
     <v-footer dark padless>
       <v-col cols="6">@2023 - portfolio</v-col>
-      <v-col cols="6"> <a class="text-decoration-none" href="#app">go top <v-icon>mdi-chevron-up</v-icon> </a></v-col>
+      <v-col cols="6">
+        <a class="text-decoration-none" href="#app"
+          >go top <v-icon>mdi-chevron-up</v-icon>
+        </a></v-col
+      >
     </v-footer>
   </v-main>
 </template>
 
 <script>
-import InfoBox from '@/components/InfoBox.vue';
-import InfoBoxRev from '@/components/InfoBoxRev.vue';
+import InfoBox from "@/components/InfoBox.vue";
+import InfoBoxRev from "@/components/InfoBoxRev.vue";
 // import ImageSolo from '@/components/ImageSolo.vue';
 export default {
+  name: "portfolioView",
+  props: {
+    version:Boolean,
+  },
   components: {
     InfoBox,
     InfoBoxRev,
@@ -59,20 +118,42 @@ export default {
   },
   data() {
     return {
-      Intro: "A university student who study in Software Devlopment and Information Technology Engineering.<br/>Do I have future goal ? Yes, I'm interest in ... ",
-      stemfestival2018: "On late 2018, Participated in <b>Stem Festival</b> alongside my another 5 members and one mentor. Project showcase: <b>IQ Test</b>",
-      codingcat: 'April - June 2019, participated in <b>Coding Cat Program</b> at Raintree.',
-      ewb: 'October - November 2019, participated in <b>Engineering Without Borders (EWB)</b> Workshop at Factory.',
-      stemfestival2019: "On December 2019, Participated in <b>Stem Festival</b> alongside my another 4 members. Project showcase: <b>Prototype of Machine to create natural fertilizer (Compost)</b>",
-      yearbook: "Participated in <b>E2stem YearBook</b> Team to build the Yearbook of 2019-2020 using Canva. Role: Designer",
-      e2Intern: "January - March 2022, <b>DigitaLL Lap Intern</b> at <b>E2stem Education Preah Yukunthor</b> for total 25 hours. Internship in role organize the lab, electronic items, digital, and lab, Test Device, set up Electric device, and Manage school System within the website Snipe-IT and Gibbon V24.",
-      soraIntern: "Intern as a <b>Frontend Developer</b> at <b>Soramitsu Khmer</b>.<br/><b>First round :</b> 12th September - 12th December 2022 <br/><b>Second round :</b> 16th May - 16th August 2023  ",
-      aboutme: "Currently, I am a second-year student of Royal University of PhnomPenh (RUPP) and E2Stem Higer Diploma in Software Development(HDSD). In RUPP, I have choosen an Information Technology Engineering as my major which I will learn in the morning. On other hand, in HDSD I'm studying Software Development which will take place in the afternoon.",
-      contactinfo: 'Street No. #128A, Sangkat Teuk Thla,<br/ >Khan Sen Sok, Phnom Penh <br/>Tel : +855-81808091<br/>Email : limchanjnint@gmail.com <br/>'
-    }
-  }
-
-}
+      Intro:
+        "A university student who study in Software Devlopment and Information Technology Engineering.<br/>Do I have future goal ? Yes, I'm interest in ... ",
+      stemfestival2018:
+        "On late 2018, Participated in <b>Stem Festival</b> alongside my another 5 members and one mentor. Project showcase: <b>IQ Test</b>",
+      codingcat:
+        "April - June 2019, participated in <b>Coding Cat Program</b> at Raintree.",
+      ewb: "October - November 2019, participated in <b>Engineering Without Borders (EWB)</b> Workshop at Factory.",
+      stemfestival2019:
+        "On December 2019, Participated in <b>Stem Festival</b> alongside my another 4 members. Project showcase: <b>Prototype of Machine to create natural fertilizer (Compost)</b>",
+      yearbook:
+        "Participated in <b>E2stem YearBook</b> Team to build the Yearbook of 2019-2020 using Canva. Role: Designer",
+      e2Intern:
+        "January - March 2022, <b>DigitaLL Lap Intern</b> at <b>E2stem Education Preah Yukunthor</b> for total 25 hours. Internship in role organize the lab, electronic items, digital, and lab, Test Device, set up Electric device, and Manage school System within the website Snipe-IT and Gibbon V24.",
+      soraIntern:
+        "Intern as a <b>Frontend Developer</b> at <b>Soramitsu Khmer</b>.<br/><b>First round :</b> 12th September - 12th December 2022 <br/><b>Second round :</b> 16th May - 16th August 2023  ",
+      aboutme:
+        "Currently, I am a second-year student of Royal University of PhnomPenh (RUPP) and E2Stem Higer Diploma in Software Development(HDSD).<br/> In RUPP, I have choosen an Information Technology Engineering as my major which I will learn in the morning.<br/> On other hand, in HDSD I'm studying Software Development which will take place in the afternoon.",
+      contactinfo:
+        "Street No. #128A, Sangkat Teuk Thla,<br/ >Khan Sen Sok, Phnom Penh <br/>Tel : +855-81808091<br/>Email : limchanjnint@gmail.com <br/>",
+      IntroName: "I am &lt; Lim &gt; Chanjnint !",
+      greetMsg: "Hey, there",
+    };
+  },
+  watch: {
+    version(newVal) {
+      if (newVal) {
+        this.greetMsg = "សួរស្ដី";
+        this.IntroName = "ខ្ញុំឈ្មោះ &lt; លឹម &gt; ច័ន្ទជនិន្ទ !";
+        return;
+      }
+      this.greetMsg = "Hey, there";
+      this.IntroName = "I am &lt; Lim &gt; Chanjnint !";
+      return;
+    },
+  },
+};
 </script>
 
 <style>
@@ -98,7 +179,7 @@ export default {
   text-align: start;
 }
 
-.logo{
+.logo {
   display: flex;
   justify-content: center;
 }
