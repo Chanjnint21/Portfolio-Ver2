@@ -80,6 +80,14 @@
         img-source="internship.jpg"
         :details="soraIntern"
       />
+      <info-box-rev
+        cols="12"
+        md="5"
+        sm="5"
+        xs="12"
+        img-source="internship.jpg"
+        :details="webcourse"
+      />
     </div>
     <div class="contact">
       <main-title titles="Contact" />
@@ -139,6 +147,7 @@ export default {
         "Street No. #128A, Sangkat Teuk Thla,<br/ >Khan Sen Sok, Phnom Penh <br/>Tel : +855-81808091<br/>Email : limchanjnint@gmail.com <br/>",
       IntroName: "I am &lt; Lim &gt; Chanjnint !",
       greetMsg: "Hey, there",
+      webcourse: "Earlier in 2023 from January - April 22, I have completed the online course from udemy call 'The Wen Developer Bootcamp 2023', that's teach by Mr. Cotl Steele. click to see the certificate"
     };
   },
   watch: {
@@ -146,10 +155,13 @@ export default {
       if (newVal) {
         this.greetMsg = "សួរស្ដី";
         this.IntroName = "ខ្ញុំឈ្មោះ &lt; លឹម &gt; ច័ន្ទជនិន្ទ !";
+        this.aboutme = "បច្ចុប្បន្ន, ខ្ញុំជានិស្សិតឆ្នាំទី 2 នៃសាកលវិទ្យាល័យភូមិន្ទភ្នំពេញ(RUPP) និង E2Stem Higer Diploma in Software Development (HDSD)។<br/> នៅ RUPP ខ្ញុំបានជ្រើសរើសវិស្វកម្មបច្ចេកវិទ្យាព័ត៌មានជាមុខវិជ្ជាគោល ដែលខ្ញុំនឹងរៀននៅ វេនព្រឹក។<br/>ចំណែកនៅក្នុង HDSD ខ្ញុំកំពុងសិក្សា ការអភិវឌ្ឍន៍កម្មវិធី ដែលខ្ញុំរៀននៅ វេនរសៀល។";
         return;
       }
       this.greetMsg = "Hey, there";
       this.IntroName = "I am &lt; Lim &gt; Chanjnint !";
+      this.aboutme=
+        "Currently, I am a second-year student of Royal University of PhnomPenh (RUPP) and E2Stem Higer Diploma in Software Development(HDSD).<br/> In RUPP, I have choosen an Information Technology Engineering as my major which I will learn in the morning.<br/> On other hand, in HDSD I'm studying Software Development which will take place in the afternoon.";
       return;
     },
   },
