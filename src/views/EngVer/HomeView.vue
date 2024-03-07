@@ -5,7 +5,7 @@
         <main-title :titles="welcome" />
       </v-col>
       <v-col cols="12"
-        ><a href="/portfolio"
+        ><a href="/EN/portfolio"
           ><v-icon x-large>mdi-chevron-right-circle</v-icon></a
         ></v-col
       >

@@ -24,27 +24,27 @@ export default{
       ChangeLang: false
     }
   },
-  watch:{
-    ChangeLang(newVal){
-      if(newVal ===true) {
-        localStorage.setItem('lang', 'KH')
-        this.Lang = 'KH'
-        this.$router.go()
-      }
-      localStorage.setItem('lang', 'EN')
-      this.Lang = 'EN'
-      this.$router.go()
-    }
-  },
-  methods: {
-    onChangeLang() {
-      this.ChangeLang = !this.ChangeLang
-      // const fullPath = this.$route.path;
-      // const CurrPath = fullPath.substring(4);
-      // console.log(desiredPath)
-      this.$router.go()
-    }
-  },
+  // watch:{
+  //   ChangeLang(newVal){
+  //     if(newVal ===true) {
+  //       localStorage.setItem('lang', 'KH')
+  //       this.Lang = 'KH'
+  //       this.$router.go()
+  //     }
+  //     localStorage.setItem('lang', 'EN')
+  //     this.Lang = 'EN'
+  //     this.$router.go()
+  //   }
+  // },
+  // methods: {
+  //   onChangeLang() {
+  //     this.ChangeLang = !this.ChangeLang
+  //     // const fullPath = this.$route.path;
+  //     // const CurrPath = fullPath.substring(4);
+  //     // console.log(desiredPath)
+  //     this.$router.go()
+  //   }
+  // },
   mounted() {
     const lang = localStorage.getItem("lang")
     // if (lang === this.Lang) return
