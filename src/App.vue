@@ -1,33 +1,3 @@
-<!-- <template>
-  <div id="app">
-    <v-app-bar class="navbar" dark>
-        <v-col class="Logo" cols="6">
-          <a href="/"><image-solo :max_-w="40" img-src="MyLogo.png"/></a>
-        </v-col>
-        <v-col class="routerLink" cols="6">
-          <router-link :to="`/En/home`">Home </router-link>
-          <router-link :to="`/En/portfolio`" > Portfolio </router-link>
-          <router-link :to="`/En/resume`">Resume</router-link>
-          <a >EN</a>
-        </v-col>
-    </v-app-bar>
-    <router-view />
-  </div>
-</template>
-
-<script>
-  export default {
-    data: () => ({
-      items: [
-        { title: 'Click Me' },
-        { title: 'Click Me' },
-        { title: 'Click Me' },
-        { title: 'Click Me 2' },
-      ],
-    }),
-  }
-</script> -->
-
 <template>
   <v-app id="app">
     <v-navigation-drawer
@@ -79,12 +49,18 @@
       }),
       watch: {
     '$vuetify.breakpoint.width' (newVal) {
-      if (newVal < 720) {
+      if (newVal < 800) {
         this.SmallScreen = true
       } else {
         this.SmallScreen = false
       }
     }
+  },
+  async mounted () {
+    const Inwidth = window.innerWidth
+    if (Inwidth < 800 ) {
+      this.SmallScreen = true
+    }
   }
-  };
+  }
 </script>
