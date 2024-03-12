@@ -22,9 +22,10 @@
       </v-col>
     </div>
 
-    <div id="experience&tranning">
+    <v-col id="experience&tranning"  class="">
       <main-title titles="Experience & Trainning" />
-      <info-box
+      <v-row class="pa-5">
+        <info-box
         cols="12"
         md="4"
         sm="4"
@@ -104,7 +105,9 @@
         img-source="graduated.jpg"
         :details="graduated"
       />
-    </div>
+      </v-row>
+      
+    </v-col>
     <div class="contact">
       <main-title titles="Contact" />
       <contact-box

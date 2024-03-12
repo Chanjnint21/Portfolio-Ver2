@@ -4,6 +4,7 @@
       v-model="drawer"
       app
       dark
+      v-if="SmallScreen"
     >
     <v-row>
       <v-col class="d-flex justify-center">
