@@ -11,7 +11,7 @@
           </div>
         </v-col>
         <v-col id="MyPic" cols="12" md="6" sm="6" xs="12">
-          <image-solo img-src="hill.jpg"
+          <image-solo img-src="myPic.jpg"
         /></v-col>
       </v-row>
     </div>
@@ -107,7 +107,7 @@
     </div>
     <div class="contact">
       <main-title titles="Contact" />
-      <info-box
+      <contact-box
         class-props="logo"
         cols="12"
         :max-width="300"
@@ -119,7 +119,7 @@
       <v-col cols="6">@2023 - portfolio</v-col>
       <v-col cols="6">
         <a class="text-decoration-none" href="#app"
-          >go top <v-icon>mdi-chevron-up</v-icon>
+          style="color: #ffffff;">go top <v-icon>mdi-chevron-up</v-icon>
         </a></v-col
       >
     </v-footer>
@@ -129,6 +129,7 @@
 <script>
 import InfoBox from "@/components/InfoBox.vue";
 import InfoBoxRev from "@/components/InfoBoxRev.vue";
+import ContactBox from '@/components/contactBox.vue';
 // import ImageSolo from '@/components/ImageSolo.vue';
 export default {
   name: "portfolioView",
@@ -138,17 +139,18 @@ export default {
   components: {
     InfoBox,
     InfoBoxRev,
+    ContactBox,
     // ImageSolo
   },
   data() {
     return {
       Intro:
-        "A university student who study in Software Devlopment and Information Technology Engineering.<br/>Do I have future goal ? Yes, I'm interest in ... ",
+        "A university student who study in Software Devlopment and Information Technology Engineering.<br/>Do I have future goal ? Yes, I'm interest in Front-end Developer. ",
       stemfestival2018:
         "On late 2018, Participated in <b>Stem Festival</b> alongside my another 5 members and one mentor. Project showcase: <b>IQ Test</b>",
       codingcat:
-        "April - June 2019, participated in <b>Coding Cat Program</b> at Raintree.",
-      ewb: "October - November 2019, participated in <b>Engineering Without Borders (EWB)</b> Workshop at Factory.",
+        "April - June 2019, participated in <b>Coding Cat Program</b> at Raintree.<a class='text-decoration-none' target='_blank' href='https://www.raintreecambodia.com/news/2019/7/1/first-clowder-of-coding-cats-graduation?fbclid=IwAR0ZVb4lG46EVO-YHK5EiSFcwrAvTzMJNtNAEIbuMY2CJivxLHDJpzrQCDA'>More Information</a>",
+      ewb: "October - November 2019, participated in <b>Engineering Without Borders (EWB)</b> Workshop at Factory. <a class='text-decoration-none' target='_blank' href='https://www.youtube.com/watch?v=i_wiMf4xZT0'>See Video</a>",
       stemfestival2019:
         "On December 2019, Participated in <b>Stem Festival</b> alongside my another 4 members. Project showcase: <b>Prototype of Machine to create natural fertilizer (Compost)</b>",
       yearbook:

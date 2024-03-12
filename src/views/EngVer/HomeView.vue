@@ -29,6 +29,7 @@ export default {
 <style>
 .Home {
   display: flex;
+  /* height: 90vh; */
   justify-content: center;
   align-items: center;
 }

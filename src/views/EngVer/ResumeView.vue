@@ -10,7 +10,11 @@
                 <div cols="9">Up to Date file:: <a
                         href="https://www.canva.com/design/DAFIosW-Xfw/f0l7YUVN4BqNNmJHmd09HQ/view?utm_content=DAFIosW-Xfw&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">link
                         to main source</a></div>
-                <div cols="3"><v-btn color="pink" x-small>Download</v-btn></div>
+                <div cols="3">
+                    <a href="../../assets/_LimChanjnintResume.pdf" download="Limchanjnint_CV">
+                        <v-btn color="white" x-small>Download</v-btn>
+                    </a>
+                </div>
             </v-col>
         </v-row>
     </v-main>
